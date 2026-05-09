@@ -3,11 +3,14 @@ import Sidebar from "../components/Sidebar";
 
 const MainLayout = () => {
   return (
-    <div className="flex h-screen">
+    <div className="flex min-h-screen flex-col md:flex-row bg-gray-100">
+      {/* Sidebar */}
       <Sidebar />
-      <div className="flex-1 p-6 bg-gray-100 overflow-y-auto">
+
+      {/* Main Content */}
+      <main className="flex-1 overflow-y-auto p-4 sm:p-6">
         <Outlet />
-      </div>
+      </main>
     </div>
   );
 };
